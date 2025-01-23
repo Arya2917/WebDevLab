@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Exams</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="content">
+            <header>
+                <h1>Dashboard Overview</h1>
+            </header>
+            
+            <div class="stats-container">
+                <div class="stat-card total-students">
+                    <div class="card-icon">👥</div>
+                    <div class="card-content">
+                        <h3>Total Students</h3>
+                        <p>2,450</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card active-courses">
+                    <div class="card-icon">📚</div>
+                    <div class="card-content">
+                        <h3>Active Courses</h3>
+                        <p>24</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card upcoming-exams">
+                    <div class="card-icon">✏️</div>
+                    <div class="card-content">
+                        <h3>Upcoming Exams</h3>
+                        <p>6</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card revenue">
+                    <div class="card-icon">💰</div>
+                    <div class="card-content">
+                        <h3>Monthly Revenue</h3>
+                        <p>$45,500</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Subject Performance</h3>
+                    <canvas id="subjectMarksChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Student Enrollment by Course</h3>
+                    <canvas id="courseEnrollmentChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Subject Performance Bar Chart
+        new Chart(document.getElementById('subjectMarksChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Mathematics', 'Science', 'English', 'History', 'Computer'],
+                datasets: [{
+                    label: 'Average Marks',
+                    data: [85, 78, 82, 70, 88],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(153, 102, 255, 0.6)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Course Enrollment Pie Chart
+        new Chart(document.getElementById('courseEnrollmentChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Computer Science', 'Business', 'Engineering', 'Arts', 'Medicine'],
+                datasets: [{
+                    data: [450, 300, 250, 200, 150],
+                   
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>
