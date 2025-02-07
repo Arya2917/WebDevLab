@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
     <div class="dashboard">
@@ -49,7 +48,7 @@
                 <div class="stat-card upcoming-exams">
                     <div class="card-icon">✏️</div>
                     <div class="card-content">
-                        <h3>Upcoming Exam</h3>
+                        <h3>Upcoming Exams</h3>
                         <p>6</p>
                     </div>
                 </div>
@@ -66,59 +65,14 @@
             <div class="charts-container">
                 <div class="chart-card">
                     <h3>Subject Performance</h3>
-                    <canvas id="subjectMarksChart"></canvas>
+                    <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Mathematics','Science','English','History','Computer'],datasets:[{label:'Average Marks',data:[85,78,82,70,88],backgroundColor:['rgba(75,192,192,0.6)','rgba(255,99,132,0.6)','rgba(54,162,235,0.6)','rgba(255,206,86,0.6)','rgba(153,102,255,0.6)']}]}}" alt="Subject Performance Chart">
                 </div>
                 <div class="chart-card">
                     <h3>Student Enrollment by Course</h3>
-                    <canvas id="courseEnrollmentChart"></canvas>
+                    <img src="https://quickchart.io/chart?c={type:'pie',data:{labels:['Computer Science','Business','Engineering','Arts','Medicine'],datasets:[{data:[450,300,250,200,150],backgroundColor:['rgba(255,99,132,0.6)','rgba(54,162,235,0.6)','rgba(255,206,86,0.6)','rgba(75,192,192,0.6)','rgba(153,102,255,0.6)']}]}}" alt="Course Enrollment Chart">
                 </div>
             </div>
         </main>
     </div>
-
-    <script>
-        // Subject Performance Bar Chart
-        new Chart(document.getElementById('subjectMarksChart'), {
-            type: 'bar',
-            data: {
-                labels: ['Mathematics', 'Science', 'English', 'History', 'Computer'],
-                datasets: [{
-                    label: 'Average Marks',
-                    data: [85, 78, 82, 70, 88],
-                    backgroundColor: [
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(153, 102, 255, 0.6)'
-                    ]
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100
-                    }
-                }
-            }
-        });
-
-        // Course Enrollment Pie Chart
-        new Chart(document.getElementById('courseEnrollmentChart'), {
-            type: 'pie',
-            data: {
-                labels: ['Computer Science', 'Business', 'Engineering', 'Arts', 'Medicine'],
-                datasets: [{
-                    data: [450, 300, 250, 200, 150],
-                   
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-    </script>
 </body>
 </html>
