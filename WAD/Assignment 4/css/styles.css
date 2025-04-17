@@ -1,0 +1,90 @@
+/* Coffee Shop Styles */
+
+/* Header and Footer */
+.coffee-header {
+    background-color: #6F4E37 !important;
+    color: #F5F5DC !important;
+}
+
+.coffee-footer {
+    background-color: #6F4E37 !important;
+    color: #F5F5DC !important;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Hero Section */
+.hero-image {
+    background-color: #8B4513;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    color: #F5F5DC;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Menu Styles */
+.menu-item {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 10px;
+}
+
+.menu-details {
+    flex: 1;
+}
+
+.menu-price {
+    font-weight: bold;
+    color: #6F4E37;
+    margin-top: 10px;
+}
+
+/* Location Page */
+.map-placeholder {
+    background-color: #DDD;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* General Styles */
+.center {
+    text-align: center;
+}
+
+.hours {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #F5F5DC;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #6F4E37;
+}
+
+/* Collapsible Panels */
+.ui-collapsible-heading {
+    margin-top: 10px;
+}
+
+/* Navigation */
+.ui-navbar li .ui-btn {
+    background-color: #8B4513 !important;
+    color: #F5F5DC !important;
+}
+
+.ui-navbar li .ui-btn-active {
+    background-color: #6F4E37 !important;
+}

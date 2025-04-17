@@ -1,0 +1,7 @@
+<!-- src/app/nav/nav.component.html -->
+<nav *ngIf="authService.isAuthenticated()">
+    <ul>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><button (click)="authService.logout()">Logout</button></li>
+    </ul>
+  </nav>

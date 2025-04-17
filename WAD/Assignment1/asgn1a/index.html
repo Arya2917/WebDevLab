@@ -1,0 +1,109 @@
+<!-- ASSIGNMENT 1-a: Create a responsive web page which shows the college admin dashboard for library management with sidebar and statistics in cards using HTML, CSS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Library Dashboard</h1>
+        <button class="btn login-btn">Login</button>
+    </header>
+
+    <div class="dashboard">
+       <!-- menu -->
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <a href="#">Dashboard</a>
+            <a href="#">Manage Books</a>
+            <a href="#">Manage Members</a>
+            <a href="#">Issue/Return</a>
+            <a href="#">Reports</a>
+        </aside>
+
+        <!-- details -->
+        <main class="content">
+            <h2>Library Statistics</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Books</h3>
+                    <p>1000</p>
+                </div>
+                <div class="card">
+                    <h3>Books Issued</h3>
+                    <p>350</p>
+                </div>
+                <div class="card">
+                    <h3>Overdue Books</h3>
+                    <p>10</p>
+                </div>
+                <div class="card">
+                    <h3>Active Members</h3>
+                    <p>300</p>
+                </div>
+            </div>
+
+            <!-- List in form of tables -->
+            <h2>Books List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 1 -->
+                    <tr>    
+                        <td>1</td>
+                        <td>The Great Gatsby</td>
+                        <td>F. Scott Fitzgerald</td>
+                        <td>Fiction</td>
+                        <td>Available</td>
+                    </tr>
+                    <!-- Book 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td>1984</td>
+                        <td>George Orwell</td>
+                        <td>Dystopian</td>
+                        <td>Issued</td>
+                    </tr>
+                    <!-- Book 3 -->
+                    <tr>
+                        <td>3</td>
+                        <td>Beautiful Ugly</td>
+                        <td>Alice Feeney </td>
+                        <td>Thriller</td>
+                        <td>Issued</td>
+                    </tr>
+                    <!-- Book 4 -->
+                    <tr>
+                        <td>4</td>
+                        <td>She Doesn't Have a Clue</td>
+                        <td>Jenny Elder Moke</td>
+                        <td>Mystery</td>
+                        <td>Available</td>
+                    </tr>
+                    <!-- Book 5 -->
+                    <tr>
+                        <td>5</td>
+                        <td>Too good to be true</td>
+                        <td>Prajakta Koli</td>
+                        <td>Romance</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>
